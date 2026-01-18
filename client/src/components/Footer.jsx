@@ -20,6 +20,7 @@ const Footer = () => {
                                     <li key={i}>
                                         <a href={link.url} className="hover:underline transition">{link.text}</a>
                                     </li>
+                                    
                                 ))}
                             </ul>
                         </div>
