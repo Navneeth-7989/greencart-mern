@@ -9,6 +9,10 @@
     --color-primary-dull: #44ae7c;
 }
 
+.no-scrollbar::-webkit-scrollbar{
+    display: none
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
