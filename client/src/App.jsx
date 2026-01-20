@@ -46,7 +46,7 @@ const App = () => {
           <Route path='/my-orders' element={<MyOrders />} />
 
           {/* SELLER ROUTES (NESTED) */}
-          <Route
+          <Route 
             path='/seller'
             element={isSeller ? <SellerLayout /> : <SellerLogin />}
           >
