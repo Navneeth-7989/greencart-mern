@@ -1,5 +1,5 @@
 // login seller : /api/seller/login
-
+import jwt from "jsonwebtoken";
 export const sellerLogin = async(req, res) =>{
    try{
      const {email, password} = req.body;
