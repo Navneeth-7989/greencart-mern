@@ -35,6 +35,21 @@ const fetchSeller = async()=>{
     }
 }
 
+
+//fetch user Auth status, user data and cart items
+
+const fetchUser = async()=>{
+    try {
+        const {data} = await axios.get('/api/user/is-auth');
+        if(data.success){
+            setUser(data.user)
+            setCartItems(data.user.cartItems)
+        }
+    } catch (error) {
+        setUser(null)
+    }
+}
+
     const fetchProducts = async ()=>{
        try {
         const {data} = await axios.get('/api/product/list')
@@ -103,7 +118,7 @@ const fetchSeller = async()=>{
     }
 
 useEffect(()=>{
-    
+    fetchUser()
     fetchSeller()
     fetchProducts()
 },[])
