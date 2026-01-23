@@ -10,7 +10,7 @@ export const placeOrderCOD = async(req, res)=>{
             return res.json({success: false, message: "Invalid Data"})
         }
 
-        let amount = await items.reduce(async(ActiveXObject, item)=>{
+        let amount = await items.reduce(async(acc, item)=>{
             const product = await Product.findById(item.product);
             return (await acc) + product.offerPrice * item.quantity;
         }, 0)
