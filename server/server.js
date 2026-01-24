@@ -28,7 +28,7 @@ await connectCloudinary()
 
 // middleware configuration
 
-const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = ['http://localhost:5173', 'https://greencart-pied-sigma.vercel.app']
 
 app.use(express.json());
 app.use(cookieParser());
